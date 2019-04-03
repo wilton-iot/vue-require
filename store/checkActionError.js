@@ -15,14 +15,12 @@
  */
 
 define([
-    "./dispatch"
-], function(dispatch) {
+], function() {
     "use strict";
 
     return function(err) {
         if (null !== err) {
             console.error(err);
-            dispatch("showMessage", String(err));
             return true;
         }
         return false;
